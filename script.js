@@ -79,7 +79,7 @@ class jokesMachine {
     display(data){
         if(data.type === 'twopart'){
             this.jokes.innerHTML =`<p>${data.setup}</p> <p>${data.delivery}</p>`
-            console.log(data.setup);
+            // console.log(data.setup); --------- debugger
         } else if(data.type === 'single') {
             this.jokes.innerHTML =`<p>${data.joke}</p>`
         } else{
