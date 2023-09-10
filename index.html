@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            background-color: #415141;
+            color: aliceblue;
+            font-family: 'Times New Roman', Times, serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100vw;
+        }
+        .hidden{
+            display: none;
+        }
+        .relative{
+            position: relative;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .absolute{
+            position: absolute;
+            top: 22px;
+            left: 0%;
+        }
+        input{
+            outline: none;
+            background-color: transparent;
+            border: 1px solid white;
+            height: 30px;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: aliceblue;
+        }
+        ul{
+            background-color: #495f49;
+            border: 1px solid white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            align-items: start;
+            justify-content: left;
+            padding: 0%;
+            width: 66.2%;
+            overflow: hidden;
+            height: 140px;
+            overflow-y: scroll;
+        }
+        li{
+            list-style: none;
+            width: 100%;
+            padding: 10px;
+        }
+        li:hover {
+            background-color: grey;
+        }
+        button{
+            background-color: transparent;
+            outline: none;
+            border: 1px solid white;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            padding: 7px;
+        }
+
+        .jokes{
+            margin-top: 20%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jokes Machine</h1>
+        <form class="relative">
+            <input type="text" placeholder="Select a category or type.." id="customInput" autocomplete="off" required>
+            <ul id="optionsList" class="hidden absolute">
+                <li>Any</li>
+                <li>Programming</li>
+                <li>Misc</li>
+                <li>Dark</li>
+                <li>Pun</li>
+                <li>Spooky</li>
+            </ul>
+        <button>Laugh</button>
+    </form>
+    <div class="jokes">
+        <span></span>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
